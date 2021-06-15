@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Todo list App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+  <!-- Main Styles File  -->
+  <link href="dist/styles.css" rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+  <div class="container">
+    <section class="task-tracker">
+      <div class="item-block add-item-block">
+        <h3 id="new-task-label" class="item-heading">Add Item </h3>
+        <div class="input-group">
+          <input id="new-task" class="form-control new-task-input" type="text" name="item_name" />
+          <button id="add-task-btn" class="add-btn">Add</button>
+        </div>
+        <div class="error hide" id="add-error">Task name is required.</div>
+      </div>
+      <div class="item-block list-block todo-list-block">
+        <h3 class="item-heading">Todo</h3>
+        <ul id="incomplete-tasks"></ul>
+        <div class="no-item hide">No task available.</div>
+      </div>
+      <div class="item-block list-block completed-list-block">
+        <h3 class="item-heading">Completed</h3>
+        <ul id="completed-tasks"></ul>
+        <div class="no-item hide">No task available.</div>
+      </div>
+    </section>
+  </div>
+  <!-- Main JS File -->
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
